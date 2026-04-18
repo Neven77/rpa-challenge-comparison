@@ -48,11 +48,16 @@ Aktuelles Implementierungsartefakt:
 Lokaler Start (Jupyter):
 
 ```bash
-pip install -r requirements.txt
 jupyter notebook rpa_challenge.ipynb
 ```
 
-Falls die Abhängigkeiten noch nicht final sind, werden sie später in `requirements.txt` ergänzt.
+Optional, falls später Abhängigkeiten ergänzt werden:
+
+```bash
+pip install -r requirements.txt
+```
+
+Wenn keine externen Pakete benötigt werden, ist eine `requirements.txt` nicht nötig.
 
 ## 6. Warum keine UiPath-/Power-Automate-Dateien enthalten sind
 

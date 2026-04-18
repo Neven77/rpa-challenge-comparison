@@ -48,11 +48,16 @@ Current implementation artifact:
 Run locally (Jupyter):
 
 ```bash
-pip install -r requirements.txt
 jupyter notebook rpa_challenge.ipynb
 ```
 
-If requirements are not finalized yet, add them later to `requirements.txt`.
+Optional, if you add dependencies later:
+
+```bash
+pip install -r requirements.txt
+```
+
+If no external packages are needed, a `requirements.txt` file is not required.
 
 ## 6. Why no UiPath / Power Automate files included
 
