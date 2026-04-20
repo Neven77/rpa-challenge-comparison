@@ -45,30 +45,53 @@ Current implementation artifact:
 
 - `rpa_challenge.ipynb`
 
-Run locally (Jupyter):
+### Quick Start
+
+Using a virtual environment (`.venv`) is strongly recommended for this project.
+
+1. Create and activate `.venv`:
 
 ```bash
-jupyter notebook rpa_challenge.ipynb
+python -m venv .venv
 ```
 
-Optional, if you add dependencies later:
+PowerShell (Windows):
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+2. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-If no external packages are needed, a `requirements.txt` file is not required.
+3. Start Jupyter and open the notebook:
+
+```bash
+jupyter notebook rpa_challenge.ipynb
+```
+
+4. In VS Code/Jupyter, select the `.venv` kernel for `rpa_challenge.ipynb`.
+
+### Prerequisites
+
+- Google Chrome must be installed locally.
+- No separate Chrome extension is required.
+- No manual ChromeDriver download is required because `webdriver-manager` fetches the matching driver automatically.
+
+### Notes
+
+- The notebook reads the input file from `data/challenge.xlsx`.
+- If `data/challenge.xlsx` is missing, the notebook auto-downloads `challenge.xlsx` and stores it in `data/`.
+
+This repository already includes a `requirements.txt` file.
 
 ## 6. Why no UiPath / Power Automate files included
 
 UiPath and Power Automate were evaluated as part of the academic project.
 Only the Python implementation is included in this repository.
-
-Optional exports can be added later in dedicated folders:
-
-- `uipath/`
-- `powerautomate/`
-- `docs/` (for criteria catalog, utility value analysis, and final report assets)
 
 ## 7. Author
 

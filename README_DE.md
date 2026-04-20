@@ -45,30 +45,53 @@ Aktuelles Implementierungsartefakt:
 
 - `rpa_challenge.ipynb`
 
-Lokaler Start (Jupyter):
+### Schnellstart
+
+Ein virtuelles Environment (`.venv`) wird für dieses Projekt klar empfohlen.
+
+1. `.venv` erstellen und aktivieren:
 
 ```bash
-jupyter notebook rpa_challenge.ipynb
+python -m venv .venv
 ```
 
-Optional, falls später Abhängigkeiten ergänzt werden:
+PowerShell (Windows):
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+2. Abhängigkeiten installieren:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Wenn keine externen Pakete benötigt werden, ist eine `requirements.txt` nicht nötig.
+3. Jupyter starten und Notebook öffnen:
+
+```bash
+jupyter notebook rpa_challenge.ipynb
+```
+
+4. In VS Code/Jupyter den `.venv`-Kernel für `rpa_challenge.ipynb` auswählen.
+
+### Voraussetzungen
+
+- Google Chrome muss lokal installiert sein.
+- Eine separate Chrome-Erweiterung ist nicht erforderlich.
+- Ein separater ChromeDriver-Download ist nicht erforderlich, da `webdriver-manager` den passenden Treiber automatisch bezieht.
+
+### Hinweise
+
+- Das Notebook liest die Eingabedatei aus `data/challenge.xlsx`.
+- Falls `data/challenge.xlsx` fehlt, lädt das Notebook `challenge.xlsx` automatisch herunter und speichert sie in `data/`.
+
+Dieses Repository enthält bereits eine `requirements.txt`.
 
 ## 6. Warum keine UiPath-/Power-Automate-Dateien enthalten sind
 
 UiPath und Power Automate wurden im Rahmen der akademischen Arbeit bewertet.
 In diesem Repository ist bewusst nur die Python-Implementierung enthalten.
-
-Optionale Exporte können später in separaten Ordnern ergänzt werden:
-
-- `uipath/`
-- `powerautomate/`
-- `docs/` (Kriterienkatalog, Nutzwertanalyse, Abschlussdokumente)
 
 ## 7. Autor
 
